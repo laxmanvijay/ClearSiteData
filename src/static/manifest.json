@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "React Chrome Extension Boilerplate",
+    "description": "A boilerplate for react chrome extension",
+    "version": "1.0.0",
+    "action" : {
+        "default_popup": "popup.html",
+        "default_title": "React Boilerplate",
+        "default_icon" : "emoji_u1f97a.png"
+    },
+    "permissions": [
+        "activeTab",
+        "identity"
+    ],
+    "oauth2": {
+        "client_id": "your client id",
+        "scopes": ["https://www.googleapis.com/auth/userinfo.email"]
+    },
+    "icons": {
+        "16" : "emoji_u1f97a.png",
+        "48" : "emoji_u1f97a.png",
+        "128" : "emoji_u1f97a.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["contentScript.js"]
+        }
+    ]
+}
